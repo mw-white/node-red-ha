@@ -1,0 +1,27 @@
+{
+  "name": "node-red-ha",
+  "version": "1.0.0",
+  "description": "Node-Red module for interacting with various home automation controllers",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mw-white/node-red-ha.git"
+  },
+  "keywords": [
+    "node-red",
+    "home automation",
+    "isy",
+    "isy-994"
+  ],
+  "node-red": {
+    "nodes": {
+      "isysend": "isysend/isysend.js"
+    }
+  },
+  "author": "Matt White",
+  "license": "Apache-v2.",
+  "bugs": {
+    "url": "https://github.com/mw-white/node-red-ha/issues"
+  },
+  "homepage": "https://github.com/mw-white/node-red-ha"
+}
