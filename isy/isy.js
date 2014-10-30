@@ -1,7 +1,22 @@
+/*
+ * node-red module to communicate with ISY series controllers
+ * from Universal Devices (ISY-99i, ISY-994i) using the REST
+ * API.
+ *
+ * Matt White
+ * m.w.white@gmail.com
+ */
+
 module.exports = function(RED) {
   "use strict";
-  var http = require('http');
+  var http = require('http'); // need http to talk to the ISY
 
+  /*
+   * Common ISY controller configuration - need host/port and 
+   * username/password to connect.
+   *
+   * TODO: Add SSL
+   */
   function ISYControllerNode(n) {
     RED.nodes.createNode(this,n);
     this.host = n.host;
@@ -19,6 +34,13 @@ module.exports = function(RED) {
     }
   });
 
+  /*
+   * ISYSend - given a node id (either a deviceid like "00 11 22 1"
+   * or a integer scene id), a controller config, and a command
+   * (such as DON, DOF, etc), send the command to the ISY
+   *
+   * TODO: add some checks to validate command
+   */
   function ISYSend(config) {
     RED.nodes.createNode(this,config);
 
