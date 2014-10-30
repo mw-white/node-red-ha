@@ -15,7 +15,7 @@
   ],
   "node-red": {
     "nodes": {
-      "isysend": "isysend/isysend.js"
+      "isy": "isy/isy.js"
     }
   },
   "author": "Matt White",
